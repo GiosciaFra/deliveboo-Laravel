@@ -1,0 +1,27 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.box-list {
+    .box-title {
+        @include title-semi;
+        padding: 16px 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .dish {
+        &:hover {
+            .dish-name {
+                text-decoration: underline;
+            }
+        }
+
+        .fa-pen-to-square {
+            &:hover {
+                color: $primary1;
+            }
+        }
+    }
+}

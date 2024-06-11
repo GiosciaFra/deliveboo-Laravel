@@ -1,0 +1,142 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+@import "./partials/admin-index";
+@import "./partials/dishes-index";
+@import "./partials/dishes-show";
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $grey8;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul,
+ol,
+menu {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: $grey1;
+    font-family: inherit;
+
+    nav {
+        background-color: $light;
+    }
+}
+
+// buttons
+.btn1 {
+    background-color: $primary1;
+    color: $light;
+    border: 1px solid $primary1;
+
+    i {
+        color: $light;
+    }
+
+    &:hover {
+        background-color: $light;
+        color: $grey8;
+        border: 1px solid $primary1;
+
+        i {
+            color: $grey8;
+        }
+    }
+}
+
+.btn2 {
+    background-color: $discount;
+    color: $light;
+    border: 1px solid $discount;
+
+    i {
+        color: $light;
+    }
+
+    &:hover {
+        background-color: $light;
+        color: $grey8;
+        border: 1px solid $discount;
+
+        i {
+            color: $grey8;
+        }
+    }
+}
+
+.btn3 {
+    background-color: $grey6;
+    color: $light;
+    border: 1px solid $grey6;
+
+    i {
+        color: $light;
+    }
+
+    &:hover {
+        background-color: $light;
+        color: $grey6;
+        border: 1px solid $grey6;
+
+        i {
+            color: $grey6;
+        }
+    }
+}
+
+// Sections
+section {
+    padding: 28px 10px;
+}
+
+.page-title {
+    @include title-semi;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.box-list {
+    @include box1;
+    padding: 20px;
+}
+
+.circle {
+    background-color: $primary1;
+    color: $light;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
